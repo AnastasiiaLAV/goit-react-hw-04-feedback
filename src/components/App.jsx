@@ -44,12 +44,12 @@ const btnName = ['good', 'neutral', 'bad']
         </Section>
 
         <Section title="Statistics">
-        {totalFeedback <= 0 ? (<Notification message="There is no feedback" />) :
+        {totalFeedback() <= 0 ? (<Notification message="There is no feedback" />) :
           (<Statistics
             good={good}
             neutral={neutral}
             bad={bad}
-            total={totalFeedback}
+            total={totalFeedback()}
             feedback={countPositiveFeedbackPercentage()}
         />)
           }
